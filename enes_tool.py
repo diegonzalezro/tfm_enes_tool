@@ -200,7 +200,6 @@ if __name__ == "__main__":
         print("7. Fingerprinting de Servicios (Service Fingerprinting)")
         print("8. Enumeración de Usuarios (User Enumeration)")
         print("9. Todas las opciones anteriores a la vez")
-        # print("10.Enumeracion de varias herramientas previas")
         print("0. Salir")
         choice = input("Elije una opción (0-9): ")
 
@@ -280,19 +279,6 @@ if __name__ == "__main__":
                 print("Debes ejecutar la opción 1 primero para obtener las IPs.")
             else:
                 run_all_options(scanned_ips, ports_to_scan)
-        # elif choice == "10":
-        #     for ip in scanned_ips:
-        #         open_ports = run_nmap(ip)
-    
-        #     if open_ports:
-        #             print("Open ports:", open_ports)
-        #             for port in open_ports:
-        #                 run_nikto(target_ip + ":" + port)
-        #             else:
-        #                 print("No open ports found.")
-
-        #             print("All scans and enumerations completed.")
-
         elif choice == "0":
             print(Fore.MAGENTA + "Saliendo..." + Style.RESET_ALL)
             break
